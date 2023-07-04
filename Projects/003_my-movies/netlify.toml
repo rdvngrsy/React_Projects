@@ -1,2 +1,6 @@
 [build]
-  command = "npx json-server --watch src/api/movies.json --port 3002"
+command = "npm run build"
+publish = "build"
+
+[build.environment]
+DISABLE_WEBCRAWLER_INDEXING = "true"
