@@ -7,18 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 //React 18 version for client render
 const container = document.getElementById('root');
 const root = createRoot(container); 
