@@ -16,7 +16,7 @@ class EditMovie extends React.Component {
 
         //console.log(id)
 
-        const response = await axios.get(`https://my-api-movies.netlify.app/movies/${id}.json`);
+        const response = await axios.get(`http://localhost:3002/movies/${id}`);
         const movie = response.data
 
         this.setState({
