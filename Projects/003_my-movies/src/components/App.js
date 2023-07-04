@@ -63,7 +63,7 @@ class App extends React.Component{
 
     deleteMovie = async (movie) => {
 
-        axios.delete(`https://my-api-movies.netlify.app/movies.json/${movie.id}`)
+        axios.delete(`https://my-api-movies.netlify.app/movies/${movie.id}.json`)
 
         const newMovieList = this.state.movies.filter((m) => m.id !== movie.id)
         this.setState(state => ({
@@ -88,7 +88,7 @@ class App extends React.Component{
 
     editMovie = async (id,updatedMovie) => {
 
-        await axios.put(`https://my-api-movies.netlify.app/movies.json/${id}`,updatedMovie)
+        await axios.put(`https://my-api-movies.netlify.app/movies/${id}.json`,updatedMovie)
     }
 
     render(){
