@@ -1,0 +1,3 @@
+[build]
+  command = "npx json-server --watch src/api/movies.json --port 3002"
+  publish = "public"
