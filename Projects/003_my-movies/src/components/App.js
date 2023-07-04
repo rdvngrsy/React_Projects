@@ -27,7 +27,7 @@ class App extends React.Component{
 
 // Yukarıdakine fetch methoduna alternatif olarak Axios methodu var. Daha pratik.
     async componentDidMount(){
-        const response = await axios.get('https://my-movies-api.netlify.app/movies.json')
+        const response = await axios.get('https://my-api-movies.netlify.app/movies.json')
         this.setState({movies:response.data})
     }
 
@@ -63,7 +63,7 @@ class App extends React.Component{
 
     deleteMovie = async (movie) => {
 
-        axios.delete(`https://my-movies-api.netlify.app/movies.json/${movie.id}`)
+        axios.delete(`https://my-api-movies.netlify.app/movies.json/${movie.id}`)
 
         const newMovieList = this.state.movies.filter((m) => m.id !== movie.id)
         this.setState(state => ({
@@ -79,7 +79,7 @@ class App extends React.Component{
 
     addMovie = async (movie) => {
 
-        await axios.post(`https://my-movies-api.netlify.app/movies.json/`,movie)
+        await axios.post(`https://my-api-movies.netlify.app/movies.json/`,movie)
 
         this.setState(state => ({
             movies: state.movies.concat([movie])
@@ -88,7 +88,7 @@ class App extends React.Component{
 
     editMovie = async (id,updatedMovie) => {
 
-        await axios.put(`https://my-movies-api.netlify.app/movies.json/${id}`,updatedMovie)
+        await axios.put(`https://my-api-movies.netlify.app/movies.json/${id}`,updatedMovie)
     }
 
     render(){
